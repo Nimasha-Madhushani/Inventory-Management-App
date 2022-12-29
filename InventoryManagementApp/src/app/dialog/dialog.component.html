@@ -1,1 +1,22 @@
-<p>dialog works!</p>
+<h1 mat-dialog-title>Add Product Form</h1>
+<div mat-dialog-content>
+    <mat-form-field appearance="outline">
+        <mat-label>Product Name</mat-label>
+        <input matInput placeholder="Placeholder">
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Product Category</mat-label>
+       <mat-select placeholder="Category">
+        <mat-option value="Fruits">Fruits</mat-option>
+        <mat-option value="Vegetable">Vegetable</mat-option>
+        <mat-option value="Electronic">Electronic</mat-option>
+       </mat-select>
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Choose a date</mat-label>
+        <input matInput [matDatepicker]="picker">
+        <mat-hint>MM/DD/YYYY</mat-hint>
+        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>      
+</div>
