@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validator, Validators } from '@angular/forms';
+import { ApiService } from '../services/api.service';
 
 @Component({
   selector: 'app-dialog',
@@ -9,7 +10,7 @@ import { FormGroup, FormBuilder, Validator, Validators } from '@angular/forms';
 export class DialogComponent implements OnInit {
   freshnessList = ['Brand New', 'Second Hand', 'Refurbished'];
   productForm!: FormGroup;
-  constructor(private formBuilder: FormBuilder) {}
+  constructor(private formBuilder: FormBuilder,private api:ApiService) {}
   ngOnInit(): void {
     this.productForm = this.formBuilder.group({
       productName: ['', Validators.required],
