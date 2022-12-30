@@ -1,12 +1,13 @@
 <h1 mat-dialog-title>Add Product Form</h1>
 <div mat-dialog-content>
+  <form [formGroup]="productForm">
     <mat-form-field appearance="outline">
         <mat-label>Product Name</mat-label>
-        <input matInput placeholder="Placeholder">
+        <input formControlName="productName" matInput placeholder="Placeholder">
     </mat-form-field>
     <mat-form-field appearance="outline">
         <mat-label>Product Category</mat-label>
-        <mat-select placeholder="Category">
+        <mat-select formControlName="category" placeholder="Category">
             <mat-option value="Fruits">Fruits</mat-option>
             <mat-option value="Vegetable">Vegetable</mat-option>
             <mat-option value="Electronic">Electronic</mat-option>
@@ -14,7 +15,7 @@
     </mat-form-field>
     <mat-form-field appearance="outline">
         <mat-label>Choose a date</mat-label>
-        <input matInput [matDatepicker]="picker">
+        <input formControlName="freshness" matInput [matDatepicker]="picker">
         <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
         <mat-datepicker #picker></mat-datepicker>
     </mat-form-field>
@@ -29,17 +30,18 @@
     </mat-radio-group>
     <mat-form-field appearance="outline">
         <mat-label>Price</mat-label>
-        <input matInput type="number" placeholder="Price">
+        <input formControlName="price" matInput type="number" placeholder="Price">
     </mat-form-field>
     <mat-form-field appearance="outline">
         <mat-label>Comment</mat-label>
-        <textarea matInput></textarea>
+        <textarea formControlName="comment"  matInput></textarea>
 
     </mat-form-field>
+  </form>
 </div>
 
 <div mat-dialog-action [align]="'end'">
     <button mat-raised-button color="warn" mat-dialog-close>Close</button>
-    <button style="margin-left: 8px;" mat-raised-button color="primary" mat-dialog-close>Save</button>
+    <button style="margin-left: 8px;" mat-raised-button color="primary" (click)="addProduct()">Save</button>
 
 </div>
