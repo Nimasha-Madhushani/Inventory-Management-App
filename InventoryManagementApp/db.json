@@ -1,6 +1,13 @@
 {
   "productList": [
-    
+    {
+      "productName": "Apple",
+      "category": "Fruits",
+      "freshness": "2022-12-15T18:30:00.000Z",
+      "price": 1000,
+      "comment": "new apple",
+      "id": 1
+    }
   ],
   "comments": [
     {
