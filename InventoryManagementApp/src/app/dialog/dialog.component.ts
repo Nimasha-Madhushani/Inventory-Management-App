@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validator, Validators } from '@angular/forms';
 import { ApiService } from '../services/api.service';
-
+import { MatDialogRef } from '@angular/material/dialog';
 @Component({
   selector: 'app-dialog',
   templateUrl: './dialog.component.html',
@@ -10,7 +10,11 @@ import { ApiService } from '../services/api.service';
 export class DialogComponent implements OnInit {
   freshnessList = ['Brand New', 'Second Hand', 'Refurbished'];
   productForm!: FormGroup;
-  constructor(private formBuilder: FormBuilder, private api: ApiService) {}
+  constructor(
+    private formBuilder: FormBuilder,
+    private api: ApiService,
+    private dialogRef: MatDialogRef<DialogComponent>
+  ) {}
   ngOnInit(): void {
     this.productForm = this.formBuilder.group({
       productName: ['', Validators.required],
@@ -26,6 +30,8 @@ export class DialogComponent implements OnInit {
       this.api.postProduct(this.productForm.value).subscribe({
         next: (res) => {
           alert('product added succesfully');
+          this.productForm.reset();
+          this.dialogRef.close();
         },
         error: () => {
           alert('error while adding the product');
