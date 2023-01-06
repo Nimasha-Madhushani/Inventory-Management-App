@@ -7,6 +7,14 @@
       "price": 1000,
       "comment": "new apple",
       "id": 1
+    },
+    {
+      "productName": "Orange",
+      "category": "Fruits",
+      "freshness": "2022-12-07T18:30:00.000Z",
+      "price": 102,
+      "comment": "kmfdk",
+      "id": 2
     }
   ],
   "comments": [
