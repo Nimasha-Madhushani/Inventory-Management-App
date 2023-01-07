@@ -1,16 +1,23 @@
-
+{
+  "productList": [
     {
-      "productList": [
-        {
-          "productName": "Apple",
-          "category": "Fruits",
-          "date": "2022-12-15T18:30:00.000Z",
-          "price": 1000,
-          "freshness":"Brand New",
-          "comment": "new apple",
-          "id": 1
-        }
-        
+      "productName": "Apple",
+      "category": "Fruits",
+      "date": "2022-12-15T18:30:00.000Z",
+      "price": 1000,
+      "freshness": "Brand New",
+      "comment": "new apple",
+      "id": 1
+    },
+    {
+      "productName": "jkjkk",
+      "category": "Vegetable",
+      "date": "2023-01-12T18:30:00.000Z",
+      "freshness": "Second Hand",
+      "price": 444,
+      "comment": "kkkk",
+      "id": 2
+    }
   ],
   "comments": [
     {
