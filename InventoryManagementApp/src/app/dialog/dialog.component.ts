@@ -13,6 +13,7 @@ export class DialogComponent implements OnInit {
   fresh: any;
   freshnessList = ['Brand New', 'Second Hand', 'Refurbished'];
   productForm!: FormGroup;
+  actionBtn : string="Save"
   constructor(
     private formBuilder: FormBuilder,
     private api: ApiService,
@@ -29,6 +30,7 @@ export class DialogComponent implements OnInit {
       comment: ['', Validators.required],
     });
     if(this.editData){
+      this.actionBtn="Update"
       this.productForm.controls['productName'].setValue(this.editData.productName)
       this.productForm.controls['category'].setValue(this.editData.category)
       this.productForm.controls['freshness'].setValue(this.editData.freshness)
