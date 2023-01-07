@@ -18,6 +18,8 @@ import {MatRadioModule} from '@angular/material/radio';
 import {MatIconModule} from '@angular/material/icon';
 import {MatSelectModule} from '@angular/material/select';
 import { AppRoutingModule } from './app-routing.module';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort';
 
 
 
@@ -42,7 +44,9 @@ import { AppRoutingModule } from './app-routing.module';
     MatRadioModule,
     MatIconModule,
     MatSelectModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MatPaginatorModule,
+    MatSortModule
     
   ],
   providers: [],
