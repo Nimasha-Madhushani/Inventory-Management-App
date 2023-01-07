@@ -20,7 +20,7 @@ export class AppComponent implements OnInit {
     'freshness',
     'price',
     'comment',
-    'action'
+    'action',
   ];
   dataSource!: MatTableDataSource<any>;
 
@@ -32,9 +32,16 @@ export class AppComponent implements OnInit {
     this.getAllProducts();
   }
   openDialog() {
-    this.dialog.open(DialogComponent, {
-      width: '30%',
-    });
+    this.dialog
+      .open(DialogComponent, {
+        width: '30%',
+      })
+      .afterClosed()
+      .subscribe((val) => {
+        if (val === 'save') {
+          this.getAllProducts();
+        }
+      });
   }
 
   getAllProducts() {
@@ -53,11 +60,18 @@ export class AppComponent implements OnInit {
   }
 
   //edit product
-  editProduct(row:any){
-    this.dialog.open(DialogComponent,{
-      width:'30%',
-      data:row
-    })
+  editProduct(row: any) {
+    this.dialog
+      .open(DialogComponent, {
+        width: '30%',
+        data: row,
+      })
+      .afterClosed()
+      .subscribe((val) => {
+        if (val === 'update') {
+          this.getAllProducts();
+        }
+      });
   }
   //Modify app.component.ts file. Define applyFilter method to filter dataSource data
   applyFilter(event: Event) {
@@ -67,6 +81,4 @@ export class AppComponent implements OnInit {
       this.dataSource.paginator.firstPage();
     }
   }
-
-
 }
