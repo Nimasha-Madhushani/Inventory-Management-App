@@ -20,6 +20,7 @@ export class AppComponent implements OnInit {
     'freshness',
     'price',
     'comment',
+    'action'
   ];
   dataSource!: MatTableDataSource<any>;
 
@@ -50,6 +51,14 @@ export class AppComponent implements OnInit {
       },
     });
   }
+
+  //edit product
+  editProduct(row:any){
+    this.dialog.open(DialogComponent,{
+      width:'30%',
+      data:row
+    })
+  }
   //Modify app.component.ts file. Define applyFilter method to filter dataSource data
   applyFilter(event: Event) {
     const filterValue = (event.target as HTMLInputElement).value;
@@ -58,4 +67,6 @@ export class AppComponent implements OnInit {
       this.dataSource.paginator.firstPage();
     }
   }
+
+
 }
