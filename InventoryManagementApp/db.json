@@ -3,26 +3,20 @@
     {
       "productName": "Apple",
       "category": "Fruits",
-      "freshness": "2022-12-15T18:30:00.000Z",
+      "date": "2022-12-15T18:30:00.000Z",
       "price": 1000,
+      "freshness": "Brand New",
       "comment": "new apple",
       "id": 1
     },
     {
-      "productName": "Orange",
-      "category": "Fruits",
-      "freshness": "2022-12-07T18:30:00.000Z",
-      "price": 102,
-      "comment": "kmfdk",
+      "productName": "jkjkk",
+      "category": "Vegetable",
+      "date": "2023-01-12T18:30:00.000Z",
+      "freshness": "Second Hand",
+      "price": 444,
+      "comment": "kkkk",
       "id": 2
-    },
-    {
-      "productName": "m,mm",
-      "category": "Fruits",
-      "freshness": "2023-01-18T18:30:00.000Z",
-      "price": 411,
-      "comment": ";llm",
-      "id": 3
     }
   ],
   "comments": [

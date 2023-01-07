@@ -24,8 +24,9 @@ export class DialogComponent implements OnInit {
     this.productForm = this.formBuilder.group({
       productName: ['', Validators.required],
       category: ['', Validators.required],
-      freshness: ['', Validators.required],
       date: ['', Validators.required],
+      freshness: ['', Validators.required],
+
       price: ['', Validators.required],
       comment: ['', Validators.required],
     });
@@ -35,8 +36,8 @@ export class DialogComponent implements OnInit {
         this.editData.productName
       );
       this.productForm.controls['category'].setValue(this.editData.category);
-      this.productForm.controls['freshness'].setValue(this.editData.freshness);
       this.productForm.controls['date'].setValue(this.editData.date);
+      this.productForm.controls['freshness'].setValue(this.editData.freshness);
       this.productForm.controls['price'].setValue(this.editData.price);
       this.productForm.controls['comment'].setValue(this.editData.comment);
     }

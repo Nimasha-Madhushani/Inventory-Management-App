@@ -73,6 +73,19 @@ export class AppComponent implements OnInit {
         }
       });
   }
+
+  //delete product
+
+  deleteProduct(id: number) {
+    this.api.deleteProduct(id).subscribe({
+      next: (res) => {
+        alert('Delete product successfully');
+      },
+      error: () => {
+        alert('Error while deleting the product');
+      },
+    });
+  }
   //Modify app.component.ts file. Define applyFilter method to filter dataSource data
   applyFilter(event: Event) {
     const filterValue = (event.target as HTMLInputElement).value;
