@@ -44,6 +44,16 @@ export class AppComponent implements OnInit {
       });
   }
 
+  //styling
+   color = '#51abcb'
+   colorCell="#a8d5e5"
+   paginatorBackgroundColor="#165a72"
+   paginatorColor="#ffffff"
+
+  // changeColor() {
+  //   this.color = 'red';
+  // }
+  
   getAllProducts() {
     this.api.getProduct().subscribe({
       next: (res) => {

@@ -13,4 +13,10 @@
     max-width: 1200px;
     margin: 0 auto;
   }
+/* .mat-header-cell{
+    background: blue;
+  }  */
  
+  /* .mat-header-cell {
+    background: var(--background-color)
+} */
